@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="main">
+        <div id="content">
+            <div id="sidenav" class="sidenav">
+                <h1>The Movie Database</h1>
+                <div class="discover">
+                    <br>
+                    <button href="#" class="categories" onclick="getMovies(apiBase + byInTheater + apiKey)">In Theater</button>
+                    <button href="#" class="categories" onclick="getMovies(apiBase + byPopularity + apiKey)">Most Popular</button>
+                    <button href="#" class="categories" onclick="getMovies(apiBase + byRate + apiKey)">Highest Rated</button>
+                    <button href="#" class="categories" onclick="getMovies(apiBase + byTomCruise + apiKey)">Tom Cruise Sci-Fi</button>
+                </div>
+                <hr>
+                <span id="menu-bar" onclick="openNav()">&#9776; Categories</span>
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <button href="#" class="categories" onclick="getMovies(apiBase + byInTheater + apiKey), closeNav()">In Theater</button>
+                        <button href="#" class="categories" onclick="getMovies(apiBase + byPopularity + apiKey), closeNav()">Most Popular</button>
+                        <button href="#" class="categories" onclick="getMovies(apiBase + byRate + apiKey), closeNav()">Highest Rated</button>
+                        <button href="#" class="categories" onclick="getMovies(apiBase + byTomCruise + apiKey), closeNav()">Tom Cruise Sci-Fi</button>
+                    </div>
+                </div>
+                <!-- <select id="dropdown">
+                    <option value="title">Title</option>
+                    <option value="release_date">Release Date</option>
+                    <option value="vote_average">Rate</option>
+                </select> -->
+            </div>
+
+            <div class="movie-content">
+                <div id="searchBar">
+                    <form autocomplete="off" id="searchBox">
+                        <h3>Top Movies</h3>
+                        <input type="text" placeholder="Search Movies" id="search">
+                    </form>
+                </div>
+            
+                <section id="movie-container">
+                
+                </section>
+            </div>
+        </div>    
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
