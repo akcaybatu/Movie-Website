@@ -24,9 +24,9 @@ function getMovies(url) {
     })    
 }
 
-const categories = document.querySelectorAll("button");
-categories.forEach((button) => {
-    button.addEventListener('click', function(e){
+const categories = document.querySelectorAll("a");
+categories.forEach((a) => {
+    a.addEventListener('click', function(e){
         let targetCategory = e.target.innerHTML;
         headerSearch.innerText = targetCategory;
     });       

@@ -45,7 +45,7 @@ h1{
     z-index: 1;
 }
   
-.sidenav button {
+.sidenav .discover a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: clamp(1rem, 2vw, 1.5rem);
@@ -59,7 +59,7 @@ h1{
     text-align: start;
 }
   
-.sidenav button:hover {
+.sidenav .discover a:hover {
     background-color: rgba(248, 248, 248, 0.10);
     color: #FFF;
 }
@@ -98,7 +98,7 @@ hr{
     margin-top: 30px;
 }
   
-.overlay button {
+.overlay a {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
@@ -108,7 +108,7 @@ hr{
     transition: 0.3s;
 }
   
-.overlay button:hover, .overlay a:focus {
+.overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
 }
   
